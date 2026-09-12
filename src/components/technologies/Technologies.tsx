@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import type { Itechnology } from '../../types/type';
 import AllTechonologies from './AllTechonologies';
 
@@ -10,6 +10,10 @@ interface TechnologiesProps{
 const Technologies = ({technologyPromise}: TechnologiesProps) => {
 
     const technologies = use(technologyPromise);
+
+    const [SelectedTechnologies , setSelectedTechnologies] = useState([]);
+
+
     console.log(technologies, "technologies");
        
     return (
@@ -18,7 +22,7 @@ const Technologies = ({technologyPromise}: TechnologiesProps) => {
                 <h2>Explore the Technologies</h2>
                 <p>Pick one technology per category to build your ideal stack.</p>
             </div>
-            <AllTechonologies technologies={technologies}></AllTechonologies>
+            <AllTechonologies technologies={technologies} selectedTechnologies={SelectedTechnologies} setSelectedTechnologies={setSelectedTechnologies}></AllTechonologies>
             
         </div>
     );
