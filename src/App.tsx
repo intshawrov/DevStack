@@ -1,10 +1,11 @@
+import { Suspense } from 'react'
 import './App.css'
-
+import Nav from './components/Nav'
 function App() {
 
   return (
     <>
-      <h2>Hello Mir</h2>
+      <Suspense><Nav></Nav></Suspense>
     </>
   )
 }
