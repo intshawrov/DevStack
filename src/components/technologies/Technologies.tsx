@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { use } from 'react';
+import type { Itechnology } from '../../types/type';
+import AllTechonologies from './AllTechonologies';
 
-const Technologies = (technologyPromise) => {
 
-    console.log(technologyPromise);
-    
+interface TechnologiesProps{
+    technologyPromise: Promise<Itechnology[]>
+}
+
+const Technologies = ({technologyPromise}: TechnologiesProps) => {
+
+    const technologies = use(technologyPromise);
+    console.log(technologies, "technologies");
+       
     return (
-        <div>
+        <div className='container mx-auto'>
+            <div>
+                <h2>Explore the Technologies</h2>
+                <p>Pick one technology per category to build your ideal stack.</p>
+            </div>
+            <AllTechonologies technologies={technologies}></AllTechonologies>
             
         </div>
     );
