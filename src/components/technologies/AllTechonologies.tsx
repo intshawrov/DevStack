@@ -33,7 +33,10 @@ const AllTechonologies = ({
             </div>
 
             <div className="lg:col-span-3 border border-gray-100 bg-white p-6 rounded-2xl shadow-sm h-fit">
-                <SelectedTechnologies></SelectedTechnologies>
+                <SelectedTechnologies
+    selectedTechnologies={selectedTechnologies}
+    setSelectedTechnologies={setSelectedTechnologies}
+/>
             </div>
         </div>
     );

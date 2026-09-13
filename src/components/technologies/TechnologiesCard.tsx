@@ -16,7 +16,7 @@ const TechnologiesCard = ({ technologies, selectedTechnologies, setSelectedTechn
     const handleAddToStack = () => {
         setIsSelected(true);
 
-        setIsSelected(true);
+        // setIsSelected(true);
 
         setSelectedTechnologies((prev) => [
             ...prev,
@@ -71,13 +71,12 @@ const TechnologiesCard = ({ technologies, selectedTechnologies, setSelectedTechn
                         </div>
                     </div>
 
-                    <button onClick={() => {
-                        setIsSelected(true);
-                        toast.success(`${technologies.name} added to stack`);
-                    }}
+                    <button onClick={handleAddToStack}
+
                         className="w-full rounded-xl bg-[#0b0f19] py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800 active:scale-[0.99] disabled:bg-gray-300 disabled:text-gray-500 cursor-pointer disabled:cursor-not-allowed"
                         disabled={isSelected === true ? true : false}
-                    >  {isSelected === true ? "Added to Stack" : "Add to Stack"} </button>
+                    >  {isSelected === true ? "Added to Stack" : "Add to Stack"} 
+                    </button>
                 </div>
             </div>
         </div>
