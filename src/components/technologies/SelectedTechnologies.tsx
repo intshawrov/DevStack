@@ -1,6 +1,5 @@
-import React, { useState, type Dispatch, type SetStateAction } from 'react';
+import { type Dispatch, type SetStateAction } from 'react';
 import type { Itechnology } from '../../types/type';
-import Technologies from './Technologies';
 import { IoClose } from 'react-icons/io5';
 
 interface ISelectedTechnologiesProps {

@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+DevStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Build Your Ideal Development Stack
 
-Currently, two official plugins are available:
+DevStack is a modern React application that helps developers explore, select, and build their ideal technology stack. Choose the technologies you want to work with and create a personalized development setup.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Technologies Used
+React
+TypeScript
+Vite
+Tailwind CSS
+React Toastify
+React Icons
+Features
+1. Explore Technologies
 
-## React Compiler
+Browse through a collection of development technologies and discover tools that fit your project needs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Select Your Stack
 
-## Expanding the Oxlint configuration
+Select multiple technologies and build your own personalized development stack.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+3. Manage Selected Technologies
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Easily add or remove technologies from your selected stack, including the option to remove all selected technologies at once.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+i. JSX stand for JavaScript XML. It is used in React to write HTML-like UI code directly inside JavaScript.
+ii.Props are data passed from a parent component to a child component and state data manage .
+iii. useState hook is used to store and update data.
+iv. The useEffect hook is used to run code after a component renders. We use it to fetch and load the JSON data when the component loads.
+v.A unique key helps React identify each item.
+vi.Conditional rendering means showing different UI based on a condition.

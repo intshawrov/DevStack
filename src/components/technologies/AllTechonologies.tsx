@@ -1,4 +1,4 @@
-import React, { type Dispatch, type SetStateAction } from 'react';
+import  { type Dispatch, type SetStateAction } from 'react';
 import type { Itechnology } from '../../types/type';
 import TechnologiesCard from './TechnologiesCard';
 import SelectedTechnologies from './SelectedTechnologies';

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
+import { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
 import type { Itechnology } from '../../types/type';
 import { toast } from 'react-toastify';
 

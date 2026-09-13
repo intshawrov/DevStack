@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import type { Itechnology } from '../../types/type';
 import AllTechonologies from './AllTechonologies';
 
@@ -11,7 +11,7 @@ const Technologies = ({technologyPromise}: TechnologiesProps) => {
 
     const technologies = use(technologyPromise);
 
-    const [SelectedTechnologies , setSelectedTechnologies] = useState([]);
+    const [SelectedTechnologies , setSelectedTechnologies] = useState<Itechnology[]>([]);
 
 
     console.log(technologies, "technologies");

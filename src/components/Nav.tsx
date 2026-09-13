@@ -10,10 +10,10 @@ const Nav = () => {
 
                 <ul className='flex gap-7 font-[500] items-center'>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#home">Technologies</a></li>
-                    <li><a href="#home">Projects</a></li>
-                    <li><a href="#home">About</a></li>
-                    <li><a href="#home">Contact</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
 
                 <div className='flex gap-5'>

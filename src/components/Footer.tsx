@@ -1,4 +1,3 @@
-import React from 'react';
 import FooterLogo from "../assets/logo-text.png";
 
 
@@ -13,9 +12,9 @@ const Footer = () => {
                         <p className='text-[#64748B] w-[484px] mt-2.5 mb-5'>Curated tools, technologies, and resources for developers building modern software.</p>
 
                         <div className='flex gap-3'>
-                            <p>GitHub</p>
-                            <p>Twitter</p>
-                            <p>LinkedIn</p>
+                            <a href="https://github.com/intshawrov">GitHub</a>
+                            <a href="https://x.com/shawrov_mir">Twitter</a>
+                            <a href="https://www.linkedin.com/in/intshawrov/">LinkedIn</a>
                         </div>
                     </div>
 
@@ -23,9 +22,9 @@ const Footer = () => {
                         <h2 className='font-bold text-[#0F172A] mb-4'>PRODUCT</h2>
 
                         <ul className='text-[#64748B] flex flex-col gap-2.5'>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Technologies</a></li>
-                            <li><a href="#">Projects</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#ttechnologies">Technologies</a></li>
+                            <li><a href="#projects">Projects</a></li>
                         </ul>
                     </div>
 
@@ -33,9 +32,9 @@ const Footer = () => {
                         <h2 className='font-bold text-[#0F172A] mb-4'>COMPANY</h2>
 
                         <ul className='text-[#64748B] flex flex-col gap-2.5'>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#careers">Careers</a></li>
                         </ul>
                     </div>
 
@@ -53,8 +52,8 @@ const Footer = () => {
                     <h3>© 2026 Dev Stack. All rights reserved.</h3>
 
                     <div className='flex gap-2.5'>
-                        <p>Privacy</p>
-                        <p>Terms</p>
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
                     </div>
                 </div>
             </div>
