@@ -6,7 +6,7 @@ const Nav = () => {
 
         <nav className='sticky top-0 z-50 bg-white border-b border-[#F1F5F9]'>
             <div className='flex justify-between container mx-auto py-6'>
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="" className="w-[139px] object-contain cursor-pointer"/>
 
                 <ul className='flex gap-7 font-[500] items-center'>
                     <li><a href="#home">Home</a></li>

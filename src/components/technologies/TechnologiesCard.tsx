@@ -1,4 +1,4 @@
-import React, { useState, type Dispatch, type SetStateAction } from 'react';
+import React, { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
 import type { Itechnology } from '../../types/type';
 import { toast } from 'react-toastify';
 
@@ -13,10 +13,17 @@ const TechnologiesCard = ({ technologies, selectedTechnologies, setSelectedTechn
     const [isSelected, setIsSelected] = useState(false);
     console.log(isSelected, setIsSelected, "isSelected, setIsSelected");
 
+    useEffect(() => {
+        const isExist = selectedTechnologies.some(
+            (technology) => technology.id === technologies.id
+        );
+
+        setIsSelected(isExist);
+    });
+
+
     const handleAddToStack = () => {
         setIsSelected(true);
-
-        // setIsSelected(true);
 
         setSelectedTechnologies((prev) => [
             ...prev,
@@ -33,7 +40,8 @@ const TechnologiesCard = ({ technologies, selectedTechnologies, setSelectedTechn
         <div>
             <div
                 key={technologies.id}
-                className="w-full rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md flex flex-col justify-between"
+                className={`w-full rounded-2xl border bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md flex flex-col justify-between ${isSelected ? "border-[#D91B7E]" : "border-gray-100"
+                    }`}
             >
                 <div>
                     <div className="mb-4 flex items-center justify-between">
@@ -73,9 +81,9 @@ const TechnologiesCard = ({ technologies, selectedTechnologies, setSelectedTechn
 
                     <button onClick={handleAddToStack}
 
-                        className="w-full rounded-xl bg-[#0b0f19] py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800 active:scale-[0.99] disabled:bg-gray-300 disabled:text-gray-500 cursor-pointer disabled:cursor-not-allowed"
+                        className="w-full rounded-xl bg-[#0b0f19] py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800 active:scale-[0.99] disabled:bg-pink-50 disabled:text-pink-500 disabled:font-bold cursor-pointer disabled:cursor-not-allowed"
                         disabled={isSelected === true ? true : false}
-                    >  {isSelected === true ? "Added to Stack" : "Add to Stack"} 
+                    >  {isSelected === true ? "✓Added to Stack" : "Add to Stack"}
                     </button>
                 </div>
             </div>

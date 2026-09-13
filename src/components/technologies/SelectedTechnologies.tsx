@@ -19,6 +19,11 @@ const SelectedTechnologies = ({ selectedTechnologies, setSelectedTechnologies }:
         );
 
         setSelectedTechnologies(restItems);
+
+    };
+
+    const handleRemoveAll = () => {
+        setSelectedTechnologies([]);
     };
 
 
@@ -27,9 +32,18 @@ const SelectedTechnologies = ({ selectedTechnologies, setSelectedTechnologies }:
             <h2 className="text-xl font-bold text-slate-900 mb-4">
                 Your Stack
             </h2>
+            {selectedTechnologies.length === 0 ? (
+                <p className="text-sm text-[#94A3B8] mb-4">
+                    No technologies selected yet.
+                </p>
+            ) : (
+                <p className="text-sm text-[#94A3B8] mb-4">
+                    {selectedTechnologies.length} technologies selected
+                </p>
+            )}
 
             {selectedTechnologies.length === 0 && (
-                <div className='px-5 py-7 border border-dashed border-[#bebebe] rounded-lg'><h3 className='text-center'>Your stack is empty.</h3></div>
+                <div className='px-5 py-7 border border-dashed border-[#bebebe] rounded-lg text-[#94A3B8]'><h3 className='text-center'>Your stack is empty.</h3></div>
             )}
 
             {selectedTechnologies.map((technology: Itechnology) => {
@@ -54,6 +68,15 @@ const SelectedTechnologies = ({ selectedTechnologies, setSelectedTechnologies }:
                     </div>
                 );
             })}
+
+            {selectedTechnologies.length > 0 && (
+                <button
+                    onClick={handleRemoveAll}
+                    className="text-sm font-medium border text-red-500 border-[#E2E8F0] py-2.5 w-full rounded-lg mt-2.5 cursor-pointer"
+                >
+                    Remove All
+                </button>
+            )}
         </div>
     );
 };

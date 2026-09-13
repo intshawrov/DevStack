@@ -18,7 +18,7 @@ const AllTechonologies = ({
     console.log(technologies, "All technologies from technology");
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-auto pb-16">
             <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {technologies.map((technologies: Itechnology) => (
 
