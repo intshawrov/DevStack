@@ -19,8 +19,8 @@ const Technologies = ({technologyPromise}: TechnologiesProps) => {
     return (
         <div className='container mx-auto'>
             <div>
-                <h2>Explore the Technologies</h2>
-                <p>Pick one technology per category to build your ideal stack.</p>
+                <h2 className='text-5xl font-extrabold'>Explore the <span className='bg-[linear-gradient(90deg,#EC4899_0%,#8B5CF6_100%)] bg-clip-text text-transparent'>Technologies</span></h2>
+                <p className='text-[#64748B] text-[18px] mt-5 mb-7'>Pick one technology per category to build your ideal stack.</p>
             </div>
             <AllTechonologies technologies={technologies} selectedTechnologies={SelectedTechnologies} setSelectedTechnologies={setSelectedTechnologies}></AllTechonologies>
             

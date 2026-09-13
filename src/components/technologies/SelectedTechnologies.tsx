@@ -29,12 +29,12 @@ const SelectedTechnologies = ({ selectedTechnologies, setSelectedTechnologies }:
             </h2>
 
             {selectedTechnologies.length === 0 && (
-                <h3>Your stack is empty.</h3>
+                <div className='px-5 py-7 border border-dashed border-[#bebebe] rounded-lg'><h3 className='text-center'>Your stack is empty.</h3></div>
             )}
 
-            {selectedTechnologies.map((technology) => {
+            {selectedTechnologies.map((technology: Itechnology) => {
                 return (
-                    <div className='flex justify-between mb-2.5 p-3 border border-[#E2E8F0] rounded-lg'>
+                    <div key={technology.id} className='flex justify-between mb-2.5 p-3 border border-[#E2E8F0] rounded-lg'>
                         <div className='flex gap-5'>
                             <img
                                 src={technology.icon}
